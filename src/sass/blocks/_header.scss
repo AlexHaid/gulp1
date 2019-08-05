@@ -1,0 +1,129 @@
+.header__topbar {
+  background-color: $sea_blue;
+  color: white;
+  background-image: url('/img/ruler.png') no-repeat;
+}
+
+.header__topbar a {
+  color: white;
+}
+
+.header__topbar .inner {
+  display: grid;
+  grid-template-columns: 400px auto 30px;
+  
+}
+
+
+
+.header__menu {
+  list-style-type: none;
+  margin: 25px 0;
+  padding-left: 0;
+}
+
+.header__menu li {
+  display: inline-block;
+}
+
+.header__menu a {
+  text-transform: uppercase;
+  text-decoration: none;
+
+  padding: $dim10 $dim15;
+}
+
+.header__logo {
+  margin-top: 25px;
+  margin-bottom: 25px;
+}
+
+.header__menu a:hover {
+  background-color: $dark_sea_blue;
+  border-bottom: 3px solid $deep_dark_blue;
+  border-radius: 6px;
+}
+
+.header__search-button {
+  align-self: center;
+  background: none;
+  background-image: url('/img/search.png');
+  border: none;
+  width: $dim16;
+  height: $dim16;
+  cursor: pointer;
+}
+
+.header__logo a {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.submenu {
+  padding-left: 0;
+  position: absolute;
+  top: 25px;
+  background-color: $red;
+  display: none;
+  z-index: 10;
+}
+
+
+
+.header__menu > li {
+  position: relative;
+}
+
+li.submenu__item {
+  display: list-item;
+  list-style-type: none;
+}
+
+li.submenu__item a {
+  text-transform: capitalize;
+  margin: 6px 6px;
+  padding: 10px 10px;
+  display: block;
+  text-align: left;
+  min-width: 105px;
+  box-sizing: border-box;
+  border-bottom: 3px solid transparent;
+  background-color: $light_red;
+  list-style-type: '>';
+  padding-left: 20px;
+}
+
+li.submenu__item a:before {
+  content: '>';
+  width: 10px;
+  height: 10px;
+  position: absolute;
+  left: 15px;
+}
+
+@media (min-width :1280px) {
+  .header__menu li:hover > .submenu{
+    display: block;
+  }
+}
+
+@media (max-width: 1279px) {
+  .header__logo {
+    width: 100%;
+    text-align: center;
+  }
+
+  .header__topbar .inner {
+    grid-template-columns: auto;
+  }
+
+  .header__search-button {
+    display: none;
+  }
+
+  .header__menu li {
+    display: list-item;
+    margin-bottom: 20px;
+  }
+}

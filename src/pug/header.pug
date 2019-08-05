@@ -1,0 +1,15 @@
+block header
+  .header__topbar
+    .inner
+      .header__logo 
+        a.logo__link(href='/') My blog
+      ul.header__menu 
+        each val in ['Home', 'About', 'Services', 'Portfolio', 'Blog', 'Features', 'Contacts']
+          li.menu__item
+            a(href='#')= val
+            if val == 'Portfolio'
+              ul.submenu
+                each val in ['First', 'Second', 'Third']
+                  li.submenu__item
+                    a(href='#')= val
+      button.header__search-button

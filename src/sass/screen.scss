@@ -1,0 +1,19 @@
+@import 'components/functions';
+@import 'components/normalize';
+@import 'components/variables';
+@import 'components/fonts';
+@import 'components/swiper';
+@import 'blocks/header';
+@import 'blocks/footer';
+@import 'pages/index';
+body {
+  min-width: 320px;
+  font-size: remCalc(16px);
+  font-family: 'Open Sans';
+  background-color: $main_bg;
+}
+
+.inner {
+  margin: auto;
+  max-width: $container_width;
+}
