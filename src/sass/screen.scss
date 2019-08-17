@@ -11,6 +11,18 @@ body {
   font-size: remCalc(16px);
   font-family: 'Open Sans';
   background-color: $main_bg;
+//sticky footer fix
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+* {
+  box-sizing: border-box;
 }
 
 .inner {

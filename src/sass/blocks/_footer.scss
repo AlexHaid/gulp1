@@ -1,60 +1,81 @@
-footer {
-  padding-top: 45px;
-  display: grid;
-  grid-template-columns: 370px 170px 170px 170px;
-  grid-column-gap: 30px;
+.footer {
+  background: url('/img/ruler-footer.png') 0 0 no-repeat;
   background-color: $sea_blue;
+  padding-top: 48px;
+  &-upper {
+    .inner {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+  &__contacts {
+    width: calc(361 / 1170 * 100%);
+    color: white;
+  }
   p {
-    margin-left: 0;
-    padding-left: 5px;
-    color: white;
     font-size: $dim13;
+    margin-bottom: 30px;
+    line-height: $dim23;
   }
-}
-
-.footer__title {
-  color: $footer_title;
-  margin-bottom: 30px;
-  font-weight: 700;
-  font-size: $dim20;
-}
-
-.footer__menu {
-  ul {
-    padding-left: 20px;
-  }
-  li {
-    padding-left: 20px;
-    list-style-type: none;
-  }
-  li:before {
-    content: '\f054';
+  &__phone a, &__email a {
+    font-size: $dim20;
+    font-style: italic;
+    font-weight: 600;
     color: white;
-    font-family: FontAwesome;
-    margin-left: -20px;
-    width: 20px;
-  }
-  a {
-    color: #fff;
     text-decoration: none;
-    font-size: $dim13;
-    line-height: 1.5em;
+    margin-left: 20px;
   }
-}
 
-@media (max-width: 1279px) {
-  footer {
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+  &__title {
+    opacity: 0.5;
+    color: #000000;
+    font-size: $dim20;
+    font-weight: 700;
+    line-height: 24px;
   }
-  .footer__blog {
-    order: -1;
 
+  &-menu {
+    padding-left: 30px;
+    &__item {
+      list-style-type: none;
+    }
+    &__link {
+      color: #ffffff;
+      text-decoration: none;
+      font-size: $dim13;
+      font-weight: 400;
+      line-height: 23.4px;
+    }
   }
-}
+  &-blog {
+    width: calc(330 / 1170 * 100%);
+    &__image {
+      background: url('/img/img-fallback.png');
+      max-width: 70px;
+      max-height: 70px;
+      width: 100%;
+      height: 70px;
+      margin-right: 18px;
+    }
+    &__item {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+    &__title {
+      margin-bottom: 24px;
+      > .footer__title {
+        display: inline-block;
+        text-transform: uppercase;
+      }
+    }
+    &__text {
+      font-size: $dim13;
+    }
+    &__date {
+      color: black;
+      opacity: 0.5;
+    }
+  }
 
-@media (max-width: 560px) {
-  footer {
-    display: block;
-  }
 }

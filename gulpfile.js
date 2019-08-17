@@ -18,7 +18,7 @@ gulp.task('sync', function() {
 });
 
 gulp.task('pug', function() {
-    return gulp.src('src/pug/*.pug', 'src/pug/pages/*.pug')
+    return gulp.src('src/pug/index.pug', 'src/pug/pages/*.pug')
     .pipe(pug({
         pretty: true
     }))

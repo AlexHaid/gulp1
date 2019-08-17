@@ -1,44 +1,43 @@
 block footer
-  .inner
-    footer
-      .footer__contacts
-        p Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse dolorum fugit atque odit alias aliquam a nostrum exercitationem ex consectetur quas saepe ullam assumenda beatae, repudiandae quos minus tenetur! Voluptates!
-      .footer__menu
-        .footer__title Company
-        ul
-          li
-            a(href='#') About
-          li
-            a(href='#') FAQ
-          li
-            a(href='#') Contact
-          li
-            a(href='#') Terms
-          li
-            a(href='#') Privacy
-          li
-            a(href='#') Testimonials
-      .footer__menu
-        .footer__title Community
-        ul
-          li
-            a(href='#') Blog
-          li
-            a(href='#') Forum
-          li
-            a(href='#') Support
-          li
-            a(href='#') Newsletter
-      .footer__blog
-        .footer__title From the blog
-        .blog__block
-          .blog__item
-            img(src='img/image.png')
-            .blog__info
-              p Lorem ipsum dolor sit amet consectetur adipisicing elit
-              .date 26 May, 2019
-          .blog__item
-            img(src='img/image.png')
-            .blog__info
-              p Lorem ipsum dolor sit amet consectetur adipisicing elit
-              .date 26 May, 2019
+  footer.footer
+    .footer-upper
+      .inner
+        .footer__contacts
+          a.header__logo(href='#')
+            span.header__logo.header__logo--big Modus
+            span.header__logo.header__logo--small Versus
+          p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae. Sed dui lorem, adipiscing in adipiscing et, interdum nec.
+          .footer__phone Phone: 
+            a(href='tel:18225695896') 182 2569 5896
+          .footer__email e-mail: 
+            a(href='mailto:info@modu.versus') info@modu.versus
+        nav.footer__menu
+          .footer__title Company
+          ul.footer-menu
+            each val in ['About', 'FAQ', 'Contact', 'Terms', 'Privacy', 'Testimonials']
+              li.footer-menu__item
+                a.footer-menu__link(href='#')= val
+        nav.footer__menu
+          .footer__title Company
+          ul.footer-menu
+            each val in ['Blog', 'Forum', 'Support', 'Newsletter']
+              li.footer-menu__item
+                a.footer-menu__link(href='#')= val
+        .footer-blog
+          .footer-blog__title
+            em from the
+            .footer__title Blog
+          .footer-blog__item
+            .footer-blog__image
+              img(src="", alt="")
+            .footer-blog__text
+              .footer-blog__title Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              .footer-blog__date 26 May, 2013
+          .footer-blog__item 
+            .footer-blog__image
+              img(src="", alt="")
+            .footer-blog__text
+              .footer-blog__title Lorem ipsum dolor sit amet, consectetur adipiscing elit
+              .footer-blog__date 26 May, 2013
+    .footer-lower
+      .inner

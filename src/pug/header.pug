@@ -1,15 +1,23 @@
 block header
-  .header__topbar
+  header.header
     .inner
-      .header__logo 
-        a.logo__link(href='/') My blog
-      ul.header__menu 
+      a.header__logo(href='#')
+        span.header__logo.header__logo--big Modus
+        span.header__logo.header__logo--small Versus
+      ul.main-menu
         each val in ['Home', 'About', 'Services', 'Portfolio', 'Blog', 'Features', 'Contacts']
-          li.menu__item
-            a(href='#')= val
-            if val == 'Portfolio'
-              ul.submenu
-                each val in ['First', 'Second', 'Third']
-                  li.submenu__item
-                    a(href='#')= val
-      button.header__search-button
+          li.main-menu__item
+            a.main-menu__link(href='#')= val
+            //- if val == 'Portfolio'
+            //-   ul.submenu
+            //-     each subval in ['Portfolio 2 column page', 'Portfolio 2 column page', 'Portfolio 2 column page']
+            //-       li.submenu__item
+            //-         a.submenu__link(href='#')= subval
+      .header__search
+        input.header__input
+        button.header__button
+          i.fas.fa-search
+      .header__overlay-button
+        div
+        div
+        div
